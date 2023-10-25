@@ -21,11 +21,24 @@ def generate_fibonacci(N):
     fibonacci_str = ' '.join(map(str, fibonacci_sequence))
     print(fibonacci_str)
 
+def count_vowels(input_string):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    count = 0
+    for char in input_string:
+        if char.lower() in vowels:
+            count += 1
+    print  (count)
+    return count
+    
+
+
     
 def main():
     N = int(input("Enter the number of Fibonacci numbers to generate: "))
     generate_fibonacci(N) 
+    count_vowels("ali")
 
 if __name__ == "__main__":
     main()  
+
 
