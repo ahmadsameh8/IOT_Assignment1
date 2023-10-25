@@ -29,7 +29,10 @@ def count_vowels(input_string):
             count += 1
     print  (count)
     return count
-
+def calculate_sum(*args):
+    total = sum(args)
+    return total
+  
 def calculate_average(numbers):
     if len(numbers) == 0:
         return 0
@@ -41,14 +44,15 @@ numbers = [int(num) for num in numbers]
 average = calculate_average(numbers)
 print(average)   
 
-
     
 def main():
     N = int(input("Enter the number of Fibonacci numbers to generate: "))
     generate_fibonacci(N) 
     count_vowels("ali")
     calculate_average(numbers)
-
+    numbers = [float(x) for x in input("Enter any numbers : ").split()]
+    result = calculate_sum(*numbers)
+    print("Sum:", result)
 
 
 if __name__ == "__main__":
