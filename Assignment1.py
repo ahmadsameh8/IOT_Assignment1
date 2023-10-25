@@ -29,7 +29,19 @@ def count_vowels(input_string):
             count += 1
     print  (count)
     return count
-    
+
+def prime_factors(n):
+    factors = []
+    divisor = 2
+
+    while n > 1:
+        while n % divisor == 0:
+            factors.append(divisor)
+            n //= divisor
+        divisor += 1
+
+    return factors
+
 
 
     
@@ -37,6 +49,8 @@ def main():
     N = int(input("Enter the number of Fibonacci numbers to generate: "))
     generate_fibonacci(N) 
     count_vowels("ali")
+    n = int(input("Enter a positive integer: "))
+    prime_factors(n)
 
 if __name__ == "__main__":
     main()  
