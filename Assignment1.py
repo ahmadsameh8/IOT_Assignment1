@@ -21,10 +21,20 @@ def generate_fibonacci(N):
     fibonacci_str = ' '.join(map(str, fibonacci_sequence))
     print(fibonacci_str)
 
+
+    # Calculating_Sum 
+def calculate_sum(*args):
+    total = sum(args)
+    return total
     
 def main():
     N = int(input("Enter the number of Fibonacci numbers to generate: "))
     generate_fibonacci(N) 
+
+    # calculate_sum 
+    numbers = [float(x) for x in input("Enter any numbers : ").split()]
+    result = calculate_sum(*numbers)
+    print("Sum:", result)
 
 if __name__ == "__main__":
     main()  
